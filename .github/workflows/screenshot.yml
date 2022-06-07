@@ -35,7 +35,7 @@ jobs:
         shot-scraper install
     - name: Take shots
       run: |
-        timestamp=$(date "+%Y.%m.%d-%H.%M.%S");shot-scraper https://www.keychron.com/products/group-buy-keychron-q85-qmk-custom-mechanical-keyboard --wait 2000 -o ($timestamp + ".png") --width 1920 --height 1080
+        timestamp=$(date "+%Y.%m.%d-%H.%M.%S");shot-scraper https://www.keychron.com/products/group-buy-keychron-q85-qmk-custom-mechanical-keyboard --wait 2000 -o $timestamp.png --width 1920 --height 1080;
     - name: Commit and push
       run: |-
         git config user.name "Automated"
